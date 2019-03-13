@@ -41,7 +41,7 @@ class IndexPage extends React.Component {
           <div className="text">
             <p className="larger">{data.allMarkdownRemark.edges[0].node.frontmatter.heading}</p>
             <p className="smaller">
-              <a href="http://www.worldofvindor.com/" target="_blank" rel="noopener noreferrer">Our most recent project</a>
+              <a href={data.allMarkdownRemark.edges[0].node.frontmatter.projectLink} target="_blank" rel="noopener noreferrer">{data.allMarkdownRemark.edges[0].node.frontmatter.projectButtonText}</a>
               <a href="mailto:yourfriends@takeshape.rocks?subject=What's up my dudes?">Send us a message</a>
             </p>
           </div>
@@ -60,6 +60,8 @@ export const query = graphql`
         node {
           frontmatter {
             heading
+            projectButtonText
+            projectLink
           }
         }
       }

@@ -2,6 +2,8 @@ backend:
   name: git-gateway
   branch: master
 
+publish_mode: editorial_workflow
+
 media_folder: static/img
 public_folder: /img
 
@@ -17,3 +19,5 @@ collections:
         fields:
           - { label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page" }
           - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Project Button Text", name: "projectButtonText", widget: "string" }
+          - { label: "Project Link", name: "projectLink", widget: "string" }
