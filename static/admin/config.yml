@@ -21,3 +21,5 @@ collections:
           - { label: "Heading", name: "heading", widget: "string" }
           - { label: "Project Button Text", name: "projectButtonText", widget: "string" }
           - { label: "Project Link", name: "projectLink", widget: "string" }
+          - { label: "Page Title", name: "pageTitle", widget: "string" }
+          - { label: "Meta Description", name: "pageDescription", widget: "string" }

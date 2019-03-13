@@ -23,7 +23,7 @@ class IndexPage extends React.Component {
     const { data } = this.props;
     return (
       <Layout>
-        <SEO title="TAKE SHAPE" image="/src/images/facebook-share.png" imageWidth="1200" imageHeight="630" />
+        <SEO title="TAKE SHAPE" image="/img/facebook-share.png" imageWidth="1200" imageHeight="630" />
         <div className="background">
           <div className="scene" ref={(el) => this.scene = el}>
             <div className="layer" data-depth="0.4" ref={(el) => this.layer = el}></div>

@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `TAKE SHAPE`,
+    siteUrl: `http://www.takeshape.com`,
     description: `We create intuitive and enticing online experiences that connect your audience with your brand.`,
-    author: `@mikegolus`,
+    author: `@takeshaperocks`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

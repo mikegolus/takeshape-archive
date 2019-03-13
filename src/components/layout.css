@@ -259,4 +259,122 @@ body {
   .text p.larger {
     font-size: 18px;
     }
-  }
+	}
+
+.contact-form {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 100vh;
+	box-sizing: border-box;
+	color: #fff;
+}
+
+.contact-form .centered-content {
+	width: 100%;
+	max-width: 480px;
+	margin: 5%;
+}
+
+.contact-form .image {
+	width: 80px;
+	height: 67px;
+	margin: 0 auto 40px;
+}
+
+.contact-form img {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+.contact-form p {
+	font-family: 'Source Serif Pro', serif;
+	font-size: 24px;
+	line-height: 1.3em;
+}
+
+.contact-form .label {
+	display: inline-block;
+	font-size: 13px;
+	margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+	background: none;
+	border: 1px solid #fff;
+	border-radius: 4px;
+	color: #fff;
+	width: 100%;
+	max-width: 100%;
+	min-width: 100%;
+	box-sizing: border-box;
+	padding: 12px;
+	font-size: 18px;
+	margin-bottom: 20px;
+	transition: 100ms;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+	outline: none;
+	border-color: #ffff00;
+}
+
+.contact-form .send {
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contact-form button {
+	position: relative;
+	border: none;
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+	width: 80px;
+	height: 50px;
+	background: none;
+	outline: none;
+}
+
+.contact-form button::before {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	border-radius: 4px;
+	background: #ffff00;
+	transition: 300ms;
+	transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	pointer-events: none;
+}
+
+.contact-form button:hover::before,
+.contact-form button:focus::before {
+	border-radius: 50%;
+	top: -15px;
+	bottom: -15px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+	border-color: #00ffff;
+	-webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+}
