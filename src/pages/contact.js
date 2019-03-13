@@ -53,9 +53,9 @@ export default class ContactPage extends React.Component {
             data-netlify-honeypot="bot-field"
             onSubmit={this.handleSubmit}
           >
-            <div className="image">
+            <Link to="/" className="image">
               <img src="/img/ts-logo-small.png" />
-            </div>
+            </Link>
             <p>Are you interested in working with us, or do you just want to say hey. Send us a message.</p>
             {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
             <input type="hidden" name="form-name" value="contact" />
