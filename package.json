@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "take-shape",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
@@ -11,9 +11,8 @@
     "gatsby-plugin-netlify-cms": "^3.0.14",
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-react-helmet": "^3.0.9",
-    "gatsby-plugin-sharp": "^2.0.28",
     "gatsby-source-filesystem": "^2.0.24",
-    "gatsby-transformer-sharp": "^2.1.17",
+    "gatsby-transformer-remark": "^2.3.2",
     "netlify-cms": "^2.6.1",
     "normalize.css": "^8.0.1",
     "parallax-js": "^3.1.0",
