@@ -341,6 +341,7 @@ body {
 	height: 50px;
 	background: none;
 	outline: none;
+	text-align: center
 }
 
 .contact-form button::before {
