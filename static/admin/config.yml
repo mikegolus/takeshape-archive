@@ -1,0 +1,17 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: static/img
+public_folder: /img
+
+display_url: https://takeshape.netlify.com/
+
+collections:
+  - name: "home" # Used in routes, e.g., /admin/collections/home
+    label: "Home" # Used in the UI
+    folder: "/src/pages" # The path to the folder where the documents are stored
+    create: false # Allow users to create new documents in this collection
+    slug: "index" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Heading", name: "heading", widget: "string"}
