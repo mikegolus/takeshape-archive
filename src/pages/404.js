@@ -1,5 +1,7 @@
 import React from "react"
+import { Link } from "gatsby"
 import Parallax from "parallax-js"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -18,6 +20,7 @@ class IndexPage extends React.Component {
     };
   }
   render(){
+    const { data } = this.props;
     return (
       <Layout>
         <SEO title="TAKE SHAPE" image="/src/images/facebook-share.png" imageWidth="1200" imageHeight="630" />
@@ -36,10 +39,10 @@ class IndexPage extends React.Component {
         </div>
         <div className="text-wrapper">
           <div className="text">
-            <p className="larger">We create intuitive and enticing online experiences that connect your audience with your brand.</p>
+            <p className="larger">{data.allMarkdownRemark.edges[0].node.frontmatter.heading}</p>
             <p className="smaller">
-              <a href="http://www.worldofvindor.com/" target="_blank" rel="noopener noreferrer">Our most recent project</a>
-              <a href="mailto:yourfriends@takeshape.rocks?subject=What's up my dudes?">Send us a message</a>
+              <a href={data.allMarkdownRemark.edges[0].node.frontmatter.projectLink} target="_blank" rel="noopener noreferrer">{data.allMarkdownRemark.edges[0].node.frontmatter.projectButtonText}</a>
+              <Link to="/contact">Send us a message</Link>
             </p>
           </div>
         </div>
@@ -49,3 +52,19 @@ class IndexPage extends React.Component {
 }
 
 export default IndexPage
+
+export const query = graphql`
+  query {
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            heading
+            projectButtonText
+            projectLink
+          }
+        }
+      }
+    }
+  }
+`
