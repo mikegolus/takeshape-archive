@@ -15,6 +15,11 @@ body {
 	min-height: 350px;
 	}
 
+	#___gatsby,
+	#___gatsby > div {
+		height: 100%;
+	}
+
 .background {
 	position: absolute;
 	z-index: 1;
@@ -267,7 +272,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	width: 100%;
-	min-height: 100vh;
+	min-height: 100%;
 	box-sizing: border-box;
 	color: #fff;
 }
@@ -279,7 +284,7 @@ body {
 }
 
 .contact-form .image {
-    display: block;
+  display: block;
 	width: 80px;
 	height: 67px;
 	margin: 0 auto 40px;
