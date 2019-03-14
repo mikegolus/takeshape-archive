@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+http://takeshape.netlify.com/* http://www.takeshape.rocks/:splat 301!
