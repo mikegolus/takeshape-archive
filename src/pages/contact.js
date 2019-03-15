@@ -52,6 +52,7 @@ export default class ContactPage extends React.Component {
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             onSubmit={this.handleSubmit}
+            autoComplete="off"
           >
             <Link to="/" className="image">
               <img src="/img/ts-logo-small.png" />
