@@ -77,7 +77,7 @@ export default class ContactPage extends React.Component {
                   onChange={this.handleChange}
                   id={'name'}
                   required={true}
-                  autoComplete="disabled"
+                  autoComplete="off"
                 />
               </div>
             </div>
@@ -93,7 +93,7 @@ export default class ContactPage extends React.Component {
                   onChange={this.handleChange}
                   id={'email'}
                   required={true}
-                  autoComplete="disabled"
+                  autoComplete="off"
                 />
               </div>
             </div>
@@ -108,7 +108,7 @@ export default class ContactPage extends React.Component {
                   onChange={this.handleChange}
                   id={'message'}
                   required={true}
-                  autoComplete="disabled"
+                  autoComplete="off"
                 />
               </div>
             </div>
