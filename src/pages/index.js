@@ -1,7 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
 import Parallax from "parallax-js"
 import { graphql } from "gatsby"
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import { Match } from '@reach/router'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -42,7 +43,7 @@ class IndexPage extends React.Component {
             <p className="larger">{data.allMarkdownRemark.edges[0].node.frontmatter.heading}</p>
             <p className="smaller">
               <a href={data.allMarkdownRemark.edges[0].node.frontmatter.projectLink} target="_blank" rel="noopener noreferrer">{data.allMarkdownRemark.edges[0].node.frontmatter.projectButtonText}</a>
-              <Link to="/contact">Send us a message</Link>
+              <AniLink fade duration={0.2} to="/contact">Send us a message</AniLink>
             </p>
           </div>
         </div>

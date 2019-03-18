@@ -25,6 +25,12 @@ module.exports = {
     },
     `gatsby-plugin-netlify-cms`,
     {
+      resolve: 'gatsby-plugin-transition-link',
+      options: {
+        layout: require.resolve(`./src/components/layout.js`),
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `TAKE SHAPE`,

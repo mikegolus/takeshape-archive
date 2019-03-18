@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import { Link } from "gatsby"
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 export default () => (
   <Layout>
@@ -8,7 +8,7 @@ export default () => (
       <div className="centered-content">
         <p>Thanks! You'll hear from us soon.</p>
         <div class="text">
-          <Link to="/">Return</Link>
+          <AniLink fade duration={0.2} to="/">Return</AniLink>
         </div>
       </div>
     </div>

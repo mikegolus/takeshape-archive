@@ -1,8 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
 import { navigate } from 'gatsby-link'
 import Parallax from "parallax-js"
 import { graphql } from "gatsby"
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -54,9 +54,9 @@ export default class ContactPage extends React.Component {
             onSubmit={this.handleSubmit}
             autoComplete="off"
           >
-            <Link to="/" className="image">
+            <AniLink fade duration={0.2} to="/" className="image">
               <img src="/img/ts-logo-small.png" />
-            </Link>
+            </AniLink>
             <p>Are you interested in working with us? Do you just want to say hey? Send us a message.</p>
             {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
             <input type="hidden" name="form-name" value="contact" />
