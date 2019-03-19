@@ -2,7 +2,6 @@ import React from "react"
 import Parallax from "parallax-js"
 import { graphql } from "gatsby"
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
-import { Match } from '@reach/router'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -11,6 +10,7 @@ class IndexPage extends React.Component {
   componentDidMount () {
     var img = new Image();
     img.src = "https://images.unsplash.com/photo-1487715433499-93acdc0bd7c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2614&q=80";
+    img.setAttribute("alt","Background Image");
     img.onload = () => {
       this.layer.appendChild(img);
       new Parallax(this.scene, {
@@ -24,7 +24,7 @@ class IndexPage extends React.Component {
     const { data } = this.props;
     return (
       <Layout>
-        <SEO title="TAKE SHAPE" image="/img/facebook-share.png" imageWidth="1200" imageHeight="630" />
+        <SEO image="/img/facebook-share.png" imageWidth="1200" imageHeight="630" />
         <div className="background">
           <div className="scene" ref={(el) => this.scene = el}>
             <div className="layer" data-depth="0.4" ref={(el) => this.layer = el}></div>

@@ -32,8 +32,9 @@ function SEO({ description, lang, meta, image, imageWidth, imageHeight, keywords
       htmlAttributes={{
         lang,
       }}
+      titleTemplate={`${site.siteMetadata.title} | %s`}
+      defaultTitle={`${site.siteMetadata.title}`}
       title={title}
-      titleTemplate={`${site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,
@@ -110,7 +111,7 @@ SEO.propTypes = {
   imageWidth: PropTypes.string,
   imageHeight: PropTypes.string,
   keywords: PropTypes.arrayOf(PropTypes.string),
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
 }
 
 export default SEO

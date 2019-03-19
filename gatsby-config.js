@@ -24,10 +24,13 @@ module.exports = {
       },
     },
     `gatsby-plugin-netlify-cms`,
+    'gatsby-plugin-transition-link',
     {
-      resolve: 'gatsby-plugin-transition-link',
+      resolve: `gatsby-plugin-google-analytics`,
       options: {
-        layout: require.resolve(`./src/components/layout.js`),
+        trackingId: "110397757",
+        sampleRate: 5,
+        siteSpeedSampleRate: 10
       },
     },
     {

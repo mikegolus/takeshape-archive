@@ -18,7 +18,8 @@ body {
 	#___gatsby,
 	#___gatsby > div,
 	.tl-edges,
-	.tl-wrapper {
+	.tl-wrapper,
+	main {
 		height: 100%;
 	}
 
