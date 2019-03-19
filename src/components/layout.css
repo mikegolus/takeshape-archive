@@ -241,11 +241,12 @@ body {
 	color: #7ae8aa;
 	}
 
-.text p.larger {
+.text h1.larger {
   font-family: 'Source Serif Pro', serif;
   font-weight: 400;
   font-size: 3.5vmin;
-  line-height: 1.25em;
+	line-height: 1.25em;
+	margin: 0;
   }
 
 .text p.smaller {
@@ -257,13 +258,13 @@ body {
 	}
 
 @media screen and (max-width:515px) {
-  .text p.larger {
+  .text h1.larger {
     font-size: 18px;
     }
   }
 
 @media screen and (max-height:515px) {
-  .text p.larger {
+  .text h1.larger {
     font-size: 18px;
     }
 	}

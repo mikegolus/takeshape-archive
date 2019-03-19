@@ -40,7 +40,7 @@ class IndexPage extends React.Component {
         </div>
         <div className="text-wrapper">
           <div className="text">
-            <p className="larger">{data.allMarkdownRemark.edges[0].node.frontmatter.heading}</p>
+            <h1 className="larger">{data.allMarkdownRemark.edges[0].node.frontmatter.heading}</h1>
             <p className="smaller">
               <a href={data.allMarkdownRemark.edges[0].node.frontmatter.projectLink} target="_blank" rel="noopener noreferrer">{data.allMarkdownRemark.edges[0].node.frontmatter.projectButtonText}</a>
               <AniLink fade duration={0.2} to="/contact">Send us a message</AniLink>
