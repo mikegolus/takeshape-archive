@@ -2,6 +2,8 @@ import React from "react"
 import Parallax from "parallax-js"
 import { graphql } from "gatsby"
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -37,6 +39,10 @@ class IndexPage extends React.Component {
               <div className="shape"></div>
             </div>
           </div>
+        </div>
+        <div className="social">
+          <a href="https://www.facebook.com/takeshapestudio/" alt="Facebook" target="_blank"><FontAwesomeIcon icon={faFacebook} /></a>
+          <a href="https://www.instagram.com/takeshapestudio/" alt="Instagram" target="_blank"><FontAwesomeIcon icon={faInstagram} /></a>
         </div>
         <div className="text-wrapper">
           <div className="text">
