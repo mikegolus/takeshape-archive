@@ -46,7 +46,7 @@ export default class ContactPage extends React.Component {
               <div class="copy narrow">
                 <h1 className="hidden">Contact</h1>
                 <h2>Let's start a conversation.</h2>
-                <p>Are you interested discussing a potential project with us, or would you just like to say hi? We look forward to hearing from you.</p>
+                <p>Are you interested in discussing a potential project with us, or would you just like to say hi? We look forward to hearing from you.</p>
                 <form
                   className="contact-form"
                   name="contact"
