@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import Header from '../components/header'
 import Footer from '../components/footer'
+import Logo from '../components/logo'
 
 import "normalize.css"
 import "./layout.css"
@@ -28,6 +29,7 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Header />
+        <Logo className="global-logo" />
         <main role="main">
           {children}
         </main>

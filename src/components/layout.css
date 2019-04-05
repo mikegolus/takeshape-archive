@@ -13,6 +13,15 @@ html {
 	display: none;
 }
 
+.global-logo {
+	position: fixed;
+	right: 0;
+	top: -12vw;
+	width: 50vw;
+	height: 50vw;
+	opacity: 0.04;
+}
+
 
 /* HEADER */
 header {
