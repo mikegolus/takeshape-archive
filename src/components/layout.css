@@ -253,7 +253,8 @@ blockquote {
 	position: relative;
 	height: 100vh;
 	background: #000;
-	transition: 1s;
+	transition: 800ms;
+	transition-timing-function: cubic-bezier(.1,.65,.4,1);
 }
 
 .background {
