@@ -452,6 +452,12 @@ blockquote {
 	}
 }
 
+@media (min-width: 1720px) {
+	.intro h1 {
+		max-width: 60vw;
+	}
+}
+
 
 /* PAGE */
 .page {

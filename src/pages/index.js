@@ -2,6 +2,7 @@ import React from "react"
 import Parallax from "parallax-js"
 import { graphql } from "gatsby"
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import Div100vh from 'react-div-100vh'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -25,7 +26,7 @@ class IndexPage extends React.Component {
     return (
       <Layout>
         <SEO image="/img/facebook-share.png" imageWidth="1200" imageHeight="630" />
-        <div className="intro">
+        <Div100vh className="intro">
           <div className="background">
             <div className="scene" ref={(el) => this.scene = el}>
               <div className="layer" data-depth="0.4" ref={(el) => this.layer = el}></div>
@@ -41,7 +42,7 @@ class IndexPage extends React.Component {
           </div>
           <h1>We create intuitive and enticing online experiences that connect your audience
   with your brand.</h1>
-        </div>
+        </Div100vh>
       </Layout>
     );
   }
