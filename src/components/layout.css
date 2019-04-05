@@ -29,6 +29,12 @@ header nav {
 	flex-wrap: nowrap;
 	align-items: center;
 	pointer-events: none;
+	transition: 400ms;
+	padding-right: 10px;
+}
+
+header nav.is-active {
+	background: #000;
 }
 
 header .menu-toggle {
@@ -71,25 +77,9 @@ header .menu-toggle .lines::after {
 	top: 0;
 }
 
-header .menu-toggle:hover {
-  cursor: pointer;
-}
-
-header .menu-toggle:hover .lines::before {
-	left: 6px;
-}
-
-header .menu-toggle:hover .lines::after {
-	right: 6px;
-}
-
 header nav.is-active .menu-toggle .lines {
 	background-color: transparent;
 	width: 16px;
-}
-
-header nav.is-active .menu-toggle:hover .lines {
-	width: 20px;
 }
 
 header nav.is-active .menu-toggle .lines::before,
@@ -104,7 +94,6 @@ header ul {
 	visibility: hidden;
 	opacity: 0;
 	transition: 400ms;
-	mix-blend-mode: overlay;
 	pointer-events: all;
 }
 
@@ -118,8 +107,9 @@ header li {
 }
 
 header a {
+	display: block;
 	padding: 10px 12px;
-	color: #999;
+	color: #fff;
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
 	text-decoration: none;
@@ -133,8 +123,26 @@ header a {
 	}
 }
 
-header a:hover {
-	color: #de008c;
+@media (hover: hover) {
+	header .menu-toggle:hover {
+		cursor: pointer;
+	}
+
+	header .menu-toggle:hover .lines::before {
+		left: 6px;
+	}
+
+	header .menu-toggle:hover .lines::after {
+		right: 6px;
+	}
+	
+	header nav.is-active .menu-toggle:hover .lines {
+		width: 20px;
+	}
+
+	header a:hover {
+		color: #de008c;
+	}
 }
 
 
