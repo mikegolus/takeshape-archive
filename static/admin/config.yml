@@ -19,7 +19,14 @@ collections:
         fields:
           - { label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page" }
           - { label: "Heading", name: "heading", widget: "string" }
-          - { label: "Project Button Text", name: "projectButtonText", widget: "string" }
-          - { label: "Project Link", name: "projectLink", widget: "string" }
+          - { label: "Page Title", name: "pageTitle", widget: "string" }
+          - { label: "Meta Description", name: "pageDescription", widget: "string" }
+      - file: "src/pages/about.md"
+        label: "About"
+        name: "about"
+        fields:
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Copy", name: "copy", widget: "string" }
           - { label: "Page Title", name: "pageTitle", widget: "string" }
           - { label: "Meta Description", name: "pageDescription", widget: "string" }

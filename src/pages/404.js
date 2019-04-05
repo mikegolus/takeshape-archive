@@ -6,7 +6,7 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-class IndexPage extends React.Component {
+class Page404 extends React.Component {
   componentDidMount () {
     var img = new Image();
     img.src = "https://images.unsplash.com/photo-1487715433499-93acdc0bd7c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2614&q=80";
@@ -25,34 +25,28 @@ class IndexPage extends React.Component {
     return (
       <Layout>
         <SEO image="/img/facebook-share.png" imageWidth="1200" imageHeight="630" />
-        <div className="background">
-          <div className="scene" ref={(el) => this.scene = el}>
-            <div className="layer" data-depth="0.4" ref={(el) => this.layer = el}></div>
-          </div>
-        </div>
-        <div className="logo-overlay">
-          <div className="logo-wrapper">
-            <div className="logo">
-              <div className="take"></div>
-              <div className="shape"></div>
+        <div className="intro">
+          <div className="background">
+            <div className="scene" ref={(el) => this.scene = el}>
+              <div className="layer" data-depth="0.4" ref={(el) => this.layer = el}></div>
             </div>
           </div>
-        </div>
-        <div className="text-wrapper">
-          <div className="text">
-            <h1 className="larger">{data.allMarkdownRemark.edges[0].node.frontmatter.heading}</h1>
-            <p className="smaller">
-              <a href={data.allMarkdownRemark.edges[0].node.frontmatter.projectLink} target="_blank" rel="noopener noreferrer">{data.allMarkdownRemark.edges[0].node.frontmatter.projectButtonText}</a>
-              <AniLink fade duration={0.2} to="/contact">Send us a message</AniLink>
-            </p>
+          <div className="logo-overlay">
+            <div className="logo-wrapper">
+              <div className="logo">
+                <div className="take"></div>
+                <div className="shape"></div>
+              </div>
+            </div>
           </div>
+          <h1>{data.allMarkdownRemark.edges[0].node.frontmatter.heading}</h1>
         </div>
       </Layout>
     );
   }
 }
 
-export default IndexPage
+export default Page404
 
 export const query = graphql`
   query {
@@ -61,8 +55,6 @@ export const query = graphql`
         node {
           frontmatter {
             heading
-            projectButtonText
-            projectLink
           }
         }
       }
