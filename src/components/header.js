@@ -25,8 +25,8 @@ class Header extends React.Component {
             <li><AniLink fade duration={0.2} to="/" onClick={this.toggleMenu}>Home</AniLink></li>
             <li><AniLink fade duration={0.2} to="/about" onClick={this.toggleMenu}>About</AniLink></li>
             <li><AniLink fade duration={0.2} to="/contact" onClick={this.toggleMenu}>Contact</AniLink></li>
-            <li><a href="https://www.facebook.com/takeshapestudio/" alt="Facebook" target="_blank"><FontAwesomeIcon icon={faFacebook} /></a></li>
-            <li><a href="https://www.instagram.com/takeshapestudio/" alt="Instagram" target="_blank"><FontAwesomeIcon icon={faInstagram} /></a></li>
+            <li><a href="https://www.facebook.com/takeshapestudio/" alt="Facebook" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebook} /></a></li>
+            <li><a href="https://www.instagram.com/takeshapestudio/" alt="Instagram" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faInstagram} /></a></li>
           </ul>
         </nav>
       </header>

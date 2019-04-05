@@ -1,7 +1,5 @@
 import React from "react"
 import { navigate } from 'gatsby-link'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
-import Logo from '../components/logo'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"

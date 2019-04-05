@@ -6,7 +6,16 @@ import SEO from "../components/seo"
 
 class AboutPage extends React.Component {
   render(){
-    const { data } = this.props;
+    const { 
+      data: { 
+        markdownRemark: { 
+          frontmatter: {
+            heading,
+            copy
+          } 
+        }
+      } 
+    } = this.props;
     return (
       <Layout>
         <SEO title="About" image="/img/facebook-share.png" imageWidth="1200" imageHeight="630" />
@@ -15,12 +24,12 @@ class AboutPage extends React.Component {
             <div className="section nav-safe text">
               <div class="copy">
                 <h1 className="hidden">About</h1>
-                <h2>{data.allMarkdownRemark.edges[0].node.frontmatter.heading}</h2>
-                <p>{data.allMarkdownRemark.edges[0].node.frontmatter.copy}</p>
+                <h2>{heading}</h2>
+                <p>{copy}</p>
               </div>
             </div>
             <div className="section media">
-              <img src="/img/stage-wov.jpg" />
+              <img src="/img/stage-wov.jpg" alt="World of Vindor Website Preview" />
             </div>
           </div>
           <div className="block">
@@ -30,7 +39,7 @@ class AboutPage extends React.Component {
           </div>
           <div className="block image">
             <div className="section media">
-              <img src="img/stage-mcalister.jpg" />
+              <img src="img/stage-mcalister.jpg" alt="Builder People Website Preview" />
             </div>
           </div>
         </div>
@@ -43,14 +52,10 @@ export default AboutPage
 
 export const query = graphql`
   query {
-    allMarkdownRemark {
-      edges {
-        node {
-          frontmatter {
-            heading
-            copy
-          }
-        }
+    markdownRemark(frontmatter: {templateKey: { eq:"about-page" }}) {
+      frontmatter {
+        heading
+        copy
       }
     }
   }

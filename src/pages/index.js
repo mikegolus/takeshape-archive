@@ -1,7 +1,6 @@
 import React from "react"
 import Parallax from "parallax-js"
 import { graphql } from "gatsby"
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import Div100vh from 'react-div-100vh'
 
 import Layout from "../components/layout"
@@ -22,10 +21,21 @@ class IndexPage extends React.Component {
     };
   }
   render(){
-    const { data } = this.props;
+    const { 
+      data: { 
+        markdownRemark: { 
+          frontmatter: {
+            heading
+          } 
+        }
+      } 
+    } = this.props;
     return (
       <Layout>
         <SEO image="/img/facebook-share.png" imageWidth="1200" imageHeight="630" />
+        <style dangerouslySetInnerHTML={{__html: `
+          footer { display: none }
+        `}}></style>
         <Div100vh className="intro">
           <div className="background">
             <div className="scene" ref={(el) => this.scene = el}>
@@ -40,8 +50,7 @@ class IndexPage extends React.Component {
               </div>
             </div>
           </div>
-          <h1>We create intuitive and enticing online experiences that connect your audience
-  with your brand.</h1>
+          <h1>{heading}</h1>
         </Div100vh>
       </Layout>
     );
@@ -52,8 +61,7 @@ export default IndexPage
 
 export const query = graphql`
   query {
-    markdownRemark {
-      html
+    markdownRemark(frontmatter: {templateKey: { eq:"home-page" }}) {
       frontmatter {
         heading
       }
