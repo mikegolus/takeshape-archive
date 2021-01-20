@@ -19,7 +19,7 @@
     "gatsby-plugin-transition-link": "^1.5.2",
     "gatsby-source-filesystem": "^2.0.24",
     "gatsby-transformer-remark": "^2.3.2",
-    "gsap": "^2.1.2",
+    "gsap": "^3.6.0",
     "netlify-cms": "^2.8.0",
     "normalize.css": "^8.0.1",
     "parallax-js": "^3.1.0",
